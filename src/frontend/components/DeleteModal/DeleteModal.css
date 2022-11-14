@@ -1,0 +1,29 @@
+.delete__modal {
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--background-color-light1);
+    gap: 3rem;
+    box-shadow: #0000003d 0px 3px 8px;
+}
+
+.delete__choices {
+    gap: 2rem;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.delete__btn {
+    background-color: var(--accent-color2);
+    color: var(--background-color-light2)
+}
+
+.cancel__btn {
+    background-color: var(--text-color-light3);
+    color: var(--background-color-light2)
+}
