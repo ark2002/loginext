@@ -5,9 +5,13 @@ import { userReducer } from "../reducer/userReducer";
 const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [users, dispatchUsers] = useReducer(userReducer, []);
+  const [users, dispatchUsers] = useReducer(userReducer, {
+    loading: false,
+    userList: [],
+  });
 
   useEffect(() => {
+    dispatchUsers({ type: "LOADING" });
     (async () => {
       const { data } = await axios.get(
         "https://randomuser.me/api/?results=10&nat=us,au,br"

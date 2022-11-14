@@ -1,16 +1,24 @@
-import { UserCard } from "../../components";
+import { Loader, UserCard } from "../../components";
 import { useUser } from "../../context/UserContext";
 import "./Main.css";
 
 const Main = () => {
-  const { users } = useUser();
+  const {
+    users: { userList, loading },
+  } = useUser();
 
   return (
-    <div className="main flex__row-center">
-      {users.map((user) => (
-        <UserCard key={user.id.value} user={user} />
-      ))}
-    </div>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="main flex__row-center">
+          {userList.map((user) => (
+            <UserCard key={user.id.value} user={user} />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 
