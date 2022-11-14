@@ -4,6 +4,7 @@
   --primary-font-family: "Roboto",sans-serif;
   --background-color-light1: #e8ebee;
   --background-color-light2: #ffffff;
+  --background-color-light3: #f2f2f2;
   --text-color-light1: #000000;
   --text-color-light2: #636363;
   --text-color-light3: #adadad;
@@ -18,7 +19,7 @@
 
 html {
   font-size: 62.5%;
-  background-color: var(--background-color-light1);
+  background-color: var(--background-color-light3);
 }
 
 a {
