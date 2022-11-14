@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 :root {
-  --primary-font-family: sans-serif;
+  --primary-font-family: "Roboto",sans-serif;
   --background-color-light1: #e8ebee;
   --background-color-light2: #ffffff;
   --text-color-light1: #000000;
-  --text-color-light2: #4a4a4a;
+  --text-color-light2: #636363;
   --text-color-light3: #adadad;
   --accent-color1: #468aff;
   --accent-color2: #ff2a2a;

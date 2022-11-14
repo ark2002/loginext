@@ -1,9 +1,10 @@
 import './App.css';
+import { Main } from './frontend/screens/Main/Main';
 
 function App() {
   return (
     <div className="App">
-      <h1>hey</h1>
+      <Main />
     </div>
   );
 }
