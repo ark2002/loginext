@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div className="main flex__row-center">
       {users.map((user) => (
-        <UserCard key={user.id.value} user={user}/>
+        <UserCard key={user.id.value} user={user} />
       ))}
     </div>
   );
