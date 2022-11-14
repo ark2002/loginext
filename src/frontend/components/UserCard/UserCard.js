@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUser } from "../../context/UserContext";
 import { DeleteModal } from "../DeleteModal/DeleteModal";
+import { EditModal } from "../EditModal/EditModal";
 import "./UserCard.css";
 
 const UserCard = ({ user }) => {
@@ -27,7 +28,7 @@ const UserCard = ({ user }) => {
           {modal === "delete" ? (
             <DeleteModal value={value} setModal={setModal} />
           ) : (
-            <></>
+            <EditModal setModal={setModal} user={user}/>
           )}
         </div>
       )}
@@ -57,7 +58,12 @@ const UserCard = ({ user }) => {
           >
             {liked ? "favorite" : "favorite_outline"}
           </span>
-          <span className="material-icons-outlined icon edit">edit</span>
+          <span
+            className="material-icons-outlined icon edit"
+            onClick={() => setModal("edit")}
+          >
+            edit
+          </span>
           <span
             className="material-icons-outlined icon delete"
             onClick={() => setModal("delete")}

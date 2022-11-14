@@ -9,9 +9,10 @@ const UserProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get("https://randomuser.me/api/?results=10&nat=us,au,br");
+      const { data } = await axios.get(
+        "https://randomuser.me/api/?results=10&nat=us,au,br"
+      );
       dispatchUsers({ type: "INITIALSET", payload: data.results });
-      console.log(data.results);
     })();
   }, []);
 

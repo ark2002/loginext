@@ -18,6 +18,10 @@ export const userReducer = (state, action) => {
           ? { ...user, liked: !user.liked }
           : { ...user }
       );
+    case "EDITUSER":
+      return state.map((user) =>
+        user.id.value === payload.id.value ? { ...payload } : user
+      );
     case "DELETEUSER":
       return state.filter((user) => user.id.value !== payload);
     default:
