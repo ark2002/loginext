@@ -9,9 +9,17 @@ export const userReducer = (state, action) => {
           fullname: `${user.name.first} ${user.name.last}`,
           website: `${user.name.first.toLowerCase()}${user.name.last.toLowerCase()}.com`,
           profileImg: `https://avatars.dicebear.com/v2/avataaars/{${user.login.username}}.svg?options[mood][]=happy`,
-          liked:false
+          liked: false,
         };
       });
+    case "LIKETOGGLE":
+      return state.map((user) =>
+        user.id.value === payload
+          ? { ...user, liked: !user.liked }
+          : { ...user }
+      );
+    case "DELETEUSER":
+      return state.filter((user) => user.id.value !== payload);
     default:
       return "";
   }
