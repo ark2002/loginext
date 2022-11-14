@@ -1,9 +1,17 @@
 import { UserCard } from "../../components";
-import "./Main.css"
+import { useUser } from "../../context/UserContext";
+import "./Main.css";
 
-const Main = () =>{
+const Main = () => {
+  const { users } = useUser();
 
-    return(<><UserCard /></>)
-}
+  return (
+    <div className="main flex__row-center">
+      {users.map((user) => (
+        <UserCard key={user.id.value} user={user}/>
+      ))}
+    </div>
+  );
+};
 
-export {Main};
+export { Main };
